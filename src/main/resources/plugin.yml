@@ -1,0 +1,12 @@
+name: AstolfoInfo
+version: ${project.version}
+main: tech.astolfo.astolfoinfo.AstolfoInfo
+api-version: 1.13
+prefix: Astolfo
+authors: [AstolfoDev]
+description: A plugin to grab a player's information
+website: https://astolfo.tech
+commands:
+  acombat:
+    usage: /<command> <player>
+    aliases: [apvp, combatstats]
