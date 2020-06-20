@@ -1,12 +1,43 @@
 name: AstolfoInfo
 version: ${project.version}
+
 main: tech.astolfo.astolfoinfo.AstolfoInfo
 api-version: 1.13
+
 prefix: Astolfo
 authors: [AstolfoDev]
+
 description: A plugin to grab a player's information
 website: https://astolfo.tech
+
+
 commands:
+  ageneral:
+    usage: Correct Syntax; /<command> <player>
+    description: Get the combat statistics of yourself or another player
+    aliases: [agen, generalstats, astolfogeneral, astolfogen]
+    permission: astolfo.info.general
+    permission-message: Missing permission; <permission>
+
   acombat:
-    usage: /<command> <player>
-    aliases: [apvp, combatstats]
+    usage: Correct Syntax; /<command> <player>
+    description: Get the combat statistics of yourself or another player
+    aliases: [apvp, combatstats, astolfocombat, astolfocom]
+    permission: astolfo.info.combat
+    permission-message: Missing permission; <permission>
+
+
+permissions:
+  astolfo.info.*:
+    description: Permissions for all AstolfoInfo commands
+    children:
+      astolfo.info.general: true
+      astolfo.info.combat: true
+
+  astolfo.info.general:
+    description: Permission to view the general stats of another player
+    default: op
+
+  astolfo.info.combat:
+    description: Permission to view the combat stats of another player
+    default: op

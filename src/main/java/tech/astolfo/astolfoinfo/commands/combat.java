@@ -8,14 +8,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Date;
-
 public class combat implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Player user = null;
+        Player user;
         int pvp;
         int pve;
         int deaths;
